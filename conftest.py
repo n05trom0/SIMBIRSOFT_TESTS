@@ -8,7 +8,7 @@ def browser(request):
         options = Options()
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(options=options)
         driver.maximize_window()
         driver.implicitly_wait(30)
         yield driver
